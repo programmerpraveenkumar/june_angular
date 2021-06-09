@@ -1,0 +1,48 @@
+{
+  "products": [
+    {
+      "name": "product1",
+      "price": "100.5",
+      "img":"http://wowthemes.net/demo/salique/salique-boxed/images/temp/avatar2.png"
+    },
+    {
+      "name": "product2",
+      "price": "500.5",
+      "img":"http://wowthemes.net/demo/salique/salique-boxed/images/temp/avatar2.png"
+    },
+    {
+      "name": "product3",
+      "price": "150.5",
+      "img":"http://wowthemes.net/demo/salique/salique-boxed/images/temp/avatar2.png"
+    },
+    {
+      "name": "test name",
+      "price": 151,
+      "img":"http://wowthemes.net/demo/salique/salique-boxed/images/temp/avatar2.png",
+      "id": "45"
+    },
+    {
+      "name": "test from angular",
+      "price": "454",
+      "id": 544,
+      "img":"http://wowthemes.net/demo/salique/salique-boxed/images/temp/avatar2.png"
+    }
+  ],
+  "support_message": [
+    {
+      "name": "user1",
+      "message": "support message",
+      "star_count": 3
+    },
+    {
+      "name": "user3",
+      "message": "support message",
+      "star_count": 2
+    },
+    {
+      "name": "user2",
+      "message": "support message",
+      "star_count": 5
+    }
+  ]
+}

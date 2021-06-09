@@ -2,7 +2,7 @@
 <div class="container toparea">
 	<div class="underlined-title">
 		<div class="editContent">
-			<h1 class="text-center latestitems">Awesome Product</h1>
+			<h1 class="text-center latestitems">Create Product</h1>
 		</div>
 		<div class="wow-hr type_short">
 			<span class="wow-hr-h">
@@ -13,6 +13,12 @@
 		</div>
 	</div>
 	<div class="row">
+
+		<input type="text" placeholder="enter product name" [(ngModel)]="product_name"/>
+		<input type="text" placeholder="enter price" [(ngModel)]="product_price"/>
+		<button (click)="storeProduct()">Store product</button>
+	</div>
+		<!--<div class="row">
 		<div class="col-md-8">
 			<div class="productbox">
 				<img src="../../assets/images/product2-2.jpg" alt="">
@@ -26,7 +32,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="col-md-4">
+	 <div class="col-md-4">
 			<a href="#" class="btn btn-buynow">$49.00 - Purchase</a>
 			<div class="properties-box">
 				<ul class="unstyle">
@@ -42,7 +48,7 @@
 					<li><b class="propertyname">Live Demo:</b><a target="_blank" href="http://www.wowthemes.net/">http://www.wowthemes.net/</a></li>
 				</ul>
 			</div>
-		</div>
+		</div> -->
 	</div>
-</div>
+<!-- </div> -->
 </section>
