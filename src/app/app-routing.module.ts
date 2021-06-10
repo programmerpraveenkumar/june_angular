@@ -15,7 +15,10 @@ const routes: Routes = [
   {path:'product',component:ProductComponent},
   {path:'login',component:LoginComponent},
   {path:' checkout',component:CheckoutComponent},
-  {path:'',component:HomeComponent}
+  {path:'',component:HomeComponent},
+   {path:'admin',loadChildren:'./admin/admin.module#AdminModule'},
+    {path:'user2',loadChildren:'./user2/user2.module#User2Module'}
+  // {path:"",loadChildren:'./user3/'}
 ];
 
 @NgModule({

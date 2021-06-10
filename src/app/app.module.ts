@@ -13,7 +13,8 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
-
+import {AdminModule} from './admin/admin.module'
+import {User2Module} from './user2/user2.module';
 
 
 @NgModule({
@@ -26,14 +27,16 @@ import { FormsModule } from '@angular/forms';
     ContactComponent,
     HeaderComponent,
     FooterComponent,
-    LoginComponent
+    LoginComponent,
     
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    AdminModule,
+    User2Module,
   ],
   providers: [],
   bootstrap: [AppComponent]
