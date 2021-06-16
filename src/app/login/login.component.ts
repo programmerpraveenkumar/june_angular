@@ -7,20 +7,20 @@ import { CommonServiceService } from '../common-service.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-
+   username = "admin";
+   password = "pass";
   constructor(private commonService:CommonServiceService) { }
 
   ngOnInit(): void {
   }
   login(){
-    let username = "admin";
-    let password = "pass";
-    this.commonService.samplePromise(username,password).then(res=>{
+    
+    this.commonService.samplePromise(this.username,this.password).then(res=>{
       console.log("Success is ",res);
     }).catch(err=>{
       console.log("Error is "+err);
     })
-    this.commonService.sampleObservable(username,password).subscribe(res=>{
+    this.commonService.sampleObservable(this.username,this.password).subscribe(res=>{
       console.log(res);
     })
     //sampleObservable

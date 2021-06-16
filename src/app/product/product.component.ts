@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ANALYZE_FOR_ENTRY_COMPONENTS, Component, OnInit } from '@angular/core';
 import { CommonServiceService } from '../common-service.service';
 
 @Component({
@@ -22,6 +22,8 @@ storeProduct(){
   }
   this.common.postHttp("products/",data).subscribe(res=>{
     console.log(res);
+  },err=>{
+    alert(err);
   })
 }
 

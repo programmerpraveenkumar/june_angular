@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import{HttpClient} from '@angular/common/http';
+import{HttpClient, HttpHeaders} from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -10,11 +10,25 @@ export class CommonServiceService {
   constructor(private http:HttpClient) { }
 
   getHttp(url){
-    return this.http.get(this.baseUrl+url);
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type':  'application/json',
+        Authorization: 'my-auth-token'
+      })
+    };
+    return this.http.get(this.baseUrl+url, httpOptions );
     //
   }
   postHttp(url,param){
-    return this.http.post(this.baseUrl+url,param);    
+    //this.http.put->updating muliple data
+    //this.http.patch->updating one or one field data
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type':  'application/json',
+        Authorization: 'my-auth-token'
+      })
+    };
+    return this.http.post(this.baseUrl+url,httpOptions,param);    
   }
 
   sampleObservable(username,password){

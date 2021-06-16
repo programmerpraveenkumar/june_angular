@@ -12,17 +12,26 @@ export class HomeComponent implements OnInit {
   constructor(private common:CommonServiceService) { }
 
   ngOnInit(): void {
-    this.common.getHttp("products").subscribe((res:any)=>{
-      //console.log(res);
-      this.products = res;
-    })
+  
+    
+  }
+  counter(i: number) {
+    return new Array(i);
+  }
+  getName(){
+    return "test";
+  }
+  //fakemethod testing.
+  getProduct(){
     this.common.getHttp("support_message").subscribe((res:any)=>{
       //console.log(res);
       this.messages = res;
     })
   }
-  counter(i: number) {
-    return new Array(i);
-}
-
+  getMessage(){
+    this.common.getHttp("products").subscribe((res:any)=>{
+      //console.log(res);
+      this.products = res;
+    })
+  }
 }
